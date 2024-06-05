@@ -13,4 +13,26 @@ document.addEventListener('DOMContentLoaded', function() {
         confetti.style.animationDelay = `${Math.random() * maxDuration}s`; // Délai aléatoire
         confettiContainer.appendChild(confetti);
     }
+
+    const addMessageForm = document.getElementById('add-message-form');
+    const messageInput = document.getElementById('message-input');
+    const nameInput = document.getElementById('name-input');
+    const messagesSection = document.getElementById('messages');
+
+    addMessageForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const messageText = messageInput.value;
+        const nameText = nameInput.value;
+
+        if (messageText && nameText) {
+            const newMessage = document.createElement('div');
+            newMessage.className = 'message gold';
+            newMessage.innerHTML = `<p>${messageText}</p><p>- ${nameText}</p>`;
+            messagesSection.appendChild(newMessage);
+
+            messageInput.value = '';
+            nameInput.value = '';
+        }
+    });
 });
