@@ -86,9 +86,3 @@ footer {
         opacity: 0;
     }
 }
-
-    100% {
-        transform: translateY(100vh);
-        opacity: 0;
-    }
-}
