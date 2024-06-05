@@ -13,9 +13,4 @@ document.addEventListener('DOMContentLoaded', function() {
         confetti.style.animationDelay = `${Math.random() * maxDuration}s`; // Délai aléatoire
         confettiContainer.appendChild(confetti);
     }
-})
-            messageInput.value = '';
-            nameInput.value = '';
-        }
-    });
 });
